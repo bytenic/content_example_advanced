@@ -51,16 +51,30 @@ Niagara内でもステートが組める話
 ![image](https://github.com/user-attachments/assets/9abd69c5-5d28-433d-9460-83195f0c342b)
 
 ## Continuous Collision Detection
+移動量を考慮した衝突
+![image](https://github.com/user-attachments/assets/8e063702-f6f7-4b2c-a58c-74246fb151a3)
 
-## Position Based Dynamics
-
-## Recreating Volumes
-
-## Hierarchy
-
-## Constraints
-
-
+### Position Based Dynamics
+![image](https://github.com/user-attachments/assets/7d139b67-10d7-4dc9-841a-4ea4f4f0f68b)
+サンプル: /Game/ExampleContent/Niagara/PBD/PBD
+![image](https://github.com/user-attachments/assets/1d46c3a7-742c-4591-ae18-86a482644d0f)
+### Recreating Volumes
+https://youtu.be/31GXFW-MgQk?t=2437
+サンプル?: /Game/ExampleContent/Niagara/NeighborGrid3D/StructuralSupport/StructuralSupport
+![image](https://github.com/user-attachments/assets/76ca40ae-1ef2-4206-acb3-584510bdbfad)
+SDFを使てtcharacterのサーフェース内部にパーティクルがめり込まない世に立体的に敷き詰めることができるっぽい？
+![image](https://github.com/user-attachments/assets/b08517fb-d33f-4e21-8fb6-cda07e2f526f)
+### Hierarchy
+パーティクルレベルで階層構造ができるっぽい
+### Constraints
+https://youtu.be/31GXFW-MgQk?t=2742
+親子付けに関しての説明をしている
 ## Swept Intersections
-
-## Safe Particle Distribution
+↑をレーザーで切り裂く表現
+どのようにレーザーの衝突を検出するか
+レーザーの起動から三角形をつかってやってる
+このコリジョンはAPIがあるっぽい
+![image](https://github.com/user-attachments/assets/1818c647-02bf-4d7b-bfba-5772e57ea56e)
+### Safe Particle Distribution
+パーティクルのをサーフェースに分布する際の方法の一つを紹介している
+![image](https://github.com/user-attachments/assets/d4faa80f-c01c-460f-b07a-c34c719cdd0a)
