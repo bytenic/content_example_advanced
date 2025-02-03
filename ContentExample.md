@@ -44,6 +44,12 @@
 ## Export Particle Data to Blueprint
 
 ## Bind Niagara Curves to Sprite Materials
+カラーカーブをNiagaraに埋め込む機能。  
+他のアセット間での取り回しができないのと、カーブ自体はNigaraSystem内部に組み込まれるはず  
+（有り無しでNiagaraSystemのアセットサイズがかわった）  
+正直マテリアル側で設定したほうがよさそうではある。  
+また、Attribute Bindingは内部的にMaterial Dynamic Instanceを使っているので  
+その分通常のマテリアルインスタンスよりオーバーヘッドがかかる。
 
 ## Collisions in Simulation Stages
 
