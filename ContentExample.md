@@ -97,7 +97,7 @@
 ![image](https://github.com/user-attachments/assets/05704f91-3748-4655-946f-35eed67f7e19)
 
 ## Component Renderer
-基本的に実験的機能しか使用しないほうが賢明  
+基本的に実験的機能だったりパフォーマンスに問題があると公言されていたりするので使用しないほうが賢明  
 ![image](https://github.com/user-attachments/assets/6d947725-2ade-4b10-aef2-25e26a626063)
 
 ## Export Particle Data to Blueprint
