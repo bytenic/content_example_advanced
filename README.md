@@ -188,11 +188,16 @@ https://youtu.be/31GXFW-MgQk?t=5232
 ![image](https://github.com/user-attachments/assets/afdba9ad-afe0-40ed-a0a9-724c53867d85)
 ![image](https://github.com/user-attachments/assets/fc39c929-072d-4e85-b9ac-6cf811229961)
 
-### 
+### BBDではパーティクルの予測位置と静止位置を照合しているのか。もしパーティクルがお互いに向かって移動していたらどうなる？(1フレーム内で交差するか)
+https://youtu.be/31GXFW-MgQk?t=5350
+ループの繰り返し数による
+エミッタが分かれている場合は認識できない
+（おそらく別々のGridでシミュレーションしているパーティクル間のインタラクトはできない）
 
-### 
-
-
+### おすすめの教材はある？
+https://youtu.be/31GXFW-MgQk?t=5484
+ここがおすすめ
+https://processing.org/
 
 
 
