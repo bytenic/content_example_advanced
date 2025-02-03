@@ -121,13 +121,79 @@ https://youtu.be/31GXFW-MgQk?t=3879
 
 ### パーティクル間のひずみに基づいてパーティクルを切り離すことはできる？
 https://youtu.be/31GXFW-MgQk?t=3986
+できる
+近くのパーティクルをクエリ→親を定期的にチェックして働いてる力に応じて親子付けを解除するとかすればいける
+
+### パーティクルを半透明メッシュ状のDistanceField GPU Particleと衝突させるには？
+https://youtu.be/31GXFW-MgQk?t=4044
+水のこと？
+これは動画みたほうがいいかも
+一応できそう？
+
+### CPUシミュレーションとGPUシミュレーションどちらを使うかの判断基準は？
+https://youtu.be/31GXFW-MgQk?t=4176
+ニーズによる
+大量のパーティクルを処理するときはやっぱGPU
+
+### パーティクルのタイムラインとかイベントからサウンドならせる？
+https://youtu.be/31GXFW-MgQk?t=4272
+できたはず
+Content Exampleにある
+
+### 空間ハッシュはNiagaraの一部？それともオーバーレイ？(モジュール機能のこといってる？)
+https://youtu.be/31GXFW-MgQk?t=4439
+隣接グリッドは内部のデータインターフェース
+グリッドは自作できる
+グリッドをワールド空間に変換するのはAdvancedにサンプルがある
+パラメータの簡単な説明もこの質問中にしてる
+/Game/ExampleContent/Niagara/NeighborGrid3D/DynamicTransforms/DynamicGridTransforms
+
+### グリッド関連の処理はカスタムHLSLからノードになる？
+https://youtu.be/31GXFW-MgQk?t=4634
+まだ。将来的にやりたい
+
+### ボイド（鳥のシミュレーション）の計算はどのくらい？パーティクルが増えるとどのように計算が増える？
+https://youtu.be/31GXFW-MgQk?t=4702
+ちゃんと計算してないけどPBDの計算量はmsより下
+鳥はPBDより軽いからもっとはやいはず(本当か)
+
+### VATで大量のアニメーションを線形補完するとリソースでかすぎないか
+https://youtu.be/31GXFW-MgQk?t=4741
+マテリアル上では単一テクスチャでやってる(VATの説明が続く)
+処理速度は大したことないけどテクスチャサイズは無視できないかも(HDRだし)
+講演者がかかわったプロジェクトでは問題になったことはない
+
+### ライトと虫のインタラクトはどうやったか
+https://youtu.be/31GXFW-MgQk?t=4836
+
+Avoid Coneモジュールを作ってそれを使った
+円錐をモデル化したやつ
+![image](https://github.com/user-attachments/assets/cf900635-b792-4352-af73-9d46d414b824)
+
+### トウモロコシ人間の処理速度ついて。ゲームで使えるのか
+https://youtu.be/31GXFW-MgQk?t=5136
+1msかかってない
+デモはレイトレ使っていて処理の大半はレンダリング負荷
+
+### カスケードはコリジョンで衝突すると回転が止まるオプションがあったけどNiagaraにはない
+https://youtu.be/31GXFW-MgQk?t=5187
+あとで調べてきます
+
+### 属性の読み取りについて、クエリの際に別のアクターのtickを使うか？(OwnerActorとか更新の影響を受けるか的なことを言ってる？)
+https://youtu.be/31GXFW-MgQk?t=5232
+いいえ。属性の読みとりは全部Nigaraで処理している
+エミッタの依存関係の話もしてる
+![image](https://github.com/user-attachments/assets/4748a8ef-0a2e-44d8-a6cb-843e2c8e5ab6)
+![image](https://github.com/user-attachments/assets/4902ba0e-0efa-4d82-af6e-12c611f5bc69)
+![image](https://github.com/user-attachments/assets/afdba9ad-afe0-40ed-a0a9-724c53867d85)
+![image](https://github.com/user-attachments/assets/fc39c929-072d-4e85-b9ac-6cf811229961)
 
 ### 
 
 ### 
 
-### 
 
-### 
+
+
 
 
