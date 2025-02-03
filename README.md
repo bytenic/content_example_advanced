@@ -195,9 +195,9 @@ https://youtu.be/31GXFW-MgQk?t=5350
 （おそらく別々のGridでシミュレーションしているパーティクル間のインタラクトはできない）
 
 ### おすすめの教材はある？
-https://youtu.be/31GXFW-MgQk?t=5484
-ここがおすすめ
-https://processing.org/
+https://youtu.be/31GXFW-MgQk?t=5484  
+ここがおすすめ  
+https://processing.org/  
 
 
 
