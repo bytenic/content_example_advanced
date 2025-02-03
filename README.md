@@ -182,10 +182,15 @@ https://youtu.be/31GXFW-MgQk?t=5187
 https://youtu.be/31GXFW-MgQk?t=5232  
 いいえ。属性の読みとりは全部Nigaraで処理している  
 エミッタの依存関係の話もしてる  
-![image](https://github.com/user-attachments/assets/4748a8ef-0a2e-44d8-a6cb-843e2c8e5ab6)  
-![image](https://github.com/user-attachments/assets/4902ba0e-0efa-4d82-af6e-12c611f5bc69)  
-![image](https://github.com/user-attachments/assets/afdba9ad-afe0-40ed-a0a9-724c53867d85)  
-![image](https://github.com/user-attachments/assets/fc39c929-072d-4e85-b9ac-6cf811229961)  
+|   |  |  |  |
+| ------------- | ------------- | ------------- | ------------- |  
+| ![image](https://github.com/user-attachments/assets/4748a8ef-0a2e-44d8-a6cb-843e2c8e5ab6)  | ![image](https://github.com/user-attachments/assets/4902ba0e-0efa-4d82-af6e-12c611f5bc69)  | ![image](https://github.com/user-attachments/assets/afdba9ad-afe0-40ed-a0a9-724c53867d85)  | ![image](https://github.com/user-attachments/assets/fc39c929-072d-4e85-b9ac-6cf811229961)  |
+
+
+
+
+
+
 
 ### BBDではパーティクルの予測位置と静止位置を照合しているのか。もしパーティクルがお互いに向かって移動していたらどうなる？(1フレーム内で交差するか)
 https://youtu.be/31GXFW-MgQk?t=5350  
