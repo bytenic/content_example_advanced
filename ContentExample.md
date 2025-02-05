@@ -10,6 +10,7 @@ UE5.5.1で確認したもの
 SimulationStageを使ってテクスチャをサンプル→RenderTargetに描画してマテリアルに転送する一連のサンプルと  
 グリッドを使ってテクスチャのUVを変えたり、2Dグリッドを使ってノイズを使ったシミュレーション結果を  
 RenderTargetに描画したりしている。  
+Texture or Grid -> RenderTargetに書き込む処理や、シミュレーションはスクラッチパッドでやっている  
 マテリアルへはAttribute Bindingを使えばいけるっぽい。  
 ただ新規でSimulationStageを作ろうとしたときにエミッタプロパティ内にあるはずのEnable Simulation Stagesのチェックが見つからない  
 
