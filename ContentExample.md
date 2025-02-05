@@ -7,6 +7,11 @@ UE5.5.1で確認したもの
 | ------------- | ------------- |
 | ![image](https://github.com/user-attachments/assets/1552bcaa-f362-4942-bb45-659f6d9e85c9)  | ![image](https://github.com/user-attachments/assets/678b4adf-61b8-4d06-bfe3-9e7afee3707b)  |
 
+SimulationStageを使ってテクスチャをサンプル→RenderTargetに描画してマテリアルに転送する一連のサンプルと  
+グリッドを使ってテクスチャのUVを変えたり、2Dグリッドを使ってノイズを使ったシミュレーション結果を  
+RenderTargetに描画したりしている。  
+マテリアルへはAttribute Bindingを使えばいけるっぽい。  
+ただ新規でSimulationStageを作ろうとしたときにエミッタプロパティ内にあるはずのEnable Simulation Stagesのチェックが見つからない  
 
 ## Communicate with External Render Targets
 サンプル
