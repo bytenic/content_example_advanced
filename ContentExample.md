@@ -1,4 +1,6 @@
 # Advanced Particles
+UE5.5.1で確認したもの
+
 ## Simulation Stage Fill Render Target
 サンプル
 - /Game/ExampleContent/Niagara/Grid2D/FIllRenderTarget
@@ -80,6 +82,9 @@
 サンプル
 - /Game/ExampleContent/Niagara/PBD/PBD  
 ![image](https://github.com/user-attachments/assets/ce232ed4-d26f-417b-8abd-af6340f05ad2)  
+PBDのサンプル  
+AdvencedEffectの動画でも紹介されてる。  
+詳細は動画の方を見たほうが良い  
 
 ## Plexus
 サンプル
@@ -87,14 +92,22 @@
 ![image](https://github.com/user-attachments/assets/2c6f6f90-2703-4714-9123-6513dab6cffa)
 
 ## Structural Support
-サンプル
+サンプル  
 - /Game/ExampleContent/Niagara/NeighborGrid3D/StructuralSupport/StructuralSupport
-![image](https://github.com/user-attachments/assets/7df3625c-438c-431f-9f72-2185c5aa1912)
+![image](https://github.com/user-attachments/assets/7df3625c-438c-431f-9f72-2185c5aa1912)  
+PBDのサンプル  
+AdvencedEffectの動画でも紹介されてる。  
+パーティクルに親子関係やConstraintをつけたり、Surface内部のSDFをサンプルしてパーティクルを操作することで  
+でAdvencedEffectのトウモロコシ人間は作られているようでそういったものを作りたいときに参考にできそう。  
+詳細は動画の方を見たほうが良い  
 
 ## Boids
 サンプル
 - /Game/ExampleContent/Niagara/NeighborGrid3D/Boids
-![image](https://github.com/user-attachments/assets/05704f91-3748-4655-946f-35eed67f7e19)
+![image](https://github.com/user-attachments/assets/05704f91-3748-4655-946f-35eed67f7e19)   
+群衆のサンプル  
+AdvencedEffectの動画でも紹介されてる。  
+SDFとの一番近い距離をライン描画しているサンプルなので、SDF使っていろいろするときにみると良いかも
 
 ## Component Renderer
 基本的に実験的機能だったりパフォーマンスに問題があると公言されていたりするので使用しないほうが賢明  
