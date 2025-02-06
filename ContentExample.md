@@ -2,7 +2,6 @@
 UE5.5.1で確認したもの
 
 ## Simulation Stage Fill Render Target,  Advect Grid 2D Collection
-
 | /Game/ExampleContent/Niagara/Grid2D/FIllRenderTarget  | /Game/ExampleContent/Niagara/Grid2D/AdvectGrid |
 | ------------- | ------------- |
 | ![image](https://github.com/user-attachments/assets/1552bcaa-f362-4942-bb45-659f6d9e85c9)  | ![image](https://github.com/user-attachments/assets/678b4adf-61b8-4d06-bfe3-9e7afee3707b)  |
@@ -15,7 +14,6 @@ Texture or Grid -> RenderTargetに書き込む処理や、シミュレーショ�
 ただ新規でSimulationStageを作ろうとしたときにエミッタプロパティ内にあるはずのEnable Simulation Stagesのチェックが見つからない  
 
 ## Communicate with External Render Targets
-サンプル
 | /Game/ExampleContent/Niagara/Grid2D/Niagara_ExternalRenderTarget  |
 | ------------- |
 | ![image](https://github.com/user-attachments/assets/cadf064b-cf25-4bc4-a21a-3279cf7d9fb7)  |
@@ -25,7 +23,6 @@ BPが保持している別メッシュのマテリアルのテクスチャにア
 何かしらのシミュレーション結果をブロードキャストしたりするときに使えるかもしれない  
 
 ## Sample GBuffer Attributes
-サンプル
 | /Game/ExampleContent/Niagara/Gbuffer/SpawnOnGBuffer  |
 | ------------- |
 | ![image](https://github.com/user-attachments/assets/c415e78c-4589-4830-a013-97c6914cc14e)  |
@@ -61,9 +58,14 @@ CustomHLSLでサンプル位置とGbufferのDepthを比較していて、差が�
 ![image](https://github.com/user-attachments/assets/c78f187c-5858-4508-8821-310d12c239e1)
 
 ## Iterative Constraints
-サンプル
-- /Game/ExampleContent/Niagara/AttributeReader/Constraints/Chain_SimulationStages
-![image](https://github.com/user-attachments/assets/d959b54e-320d-4a03-8dc8-246f329db883)
+| /Game/ExampleContent/Niagara/AttributeReader/Constraints/Chain_SimulationStages  |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/d959b54e-320d-4a03-8dc8-246f329db883)  |
+
+チェーンのシミュレーションを行うサンプル。  
+Resolverの処理をシミュレーションステージでループさせてやってる。  
+各チェーン間の読み取りはParticle Attribute ReaderをSimuilationStageで使ってやる模様。  
+Resolverの処理はけっこう込み入ったスクリプトになるので実際に使うとなったときに読むでよさそう。  
 
 ## Color Copy by Cell
 サンプル
