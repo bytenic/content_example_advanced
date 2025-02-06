@@ -72,8 +72,12 @@ CustomHLSLでサンプル位置とGbufferのDepthを比較していて、差が�
 
 ## Dynamic Grid Transform
 サンプル
-- /Game/ExampleContent/Niagara/NeighborGrid3D/DynamicTransforms/DynamicGridTransforms
-![image](https://github.com/user-attachments/assets/78d065bb-ddc0-4ba4-a8db-05fd66f53ab9)
+| /Game/ExampleContent/Niagara/NeighborGrid3D/DynamicTransforms/DynamicGridTransforms  |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/78d065bb-ddc0-4ba4-a8db-05fd66f53ab9)  |
+
+シミュレーションGridの回転サンプル。  
+RotatinonMatrixはSystem上で更新、共有している  
 
 ## Max Neighbors Per Cell
 サンプル
