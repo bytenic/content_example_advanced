@@ -16,7 +16,6 @@ Texture or Grid -> RenderTargetに書き込む処理や、シミュレーショ�
 
 ## Communicate with External Render Targets
 サンプル
-
 | /Game/ExampleContent/Niagara/Grid2D/Niagara_ExternalRenderTarget  |
 | ------------- |
 | ![image](https://github.com/user-attachments/assets/cadf064b-cf25-4bc4-a21a-3279cf7d9fb7)  |
@@ -27,8 +26,13 @@ BPが保持している別メッシュのマテリアルのテクスチャにア
 
 ## Sample GBuffer Attributes
 サンプル
-- /Game/ExampleContent/Niagara/Gbuffer/SpawnOnGBuffer
-![image](https://github.com/user-attachments/assets/c415e78c-4589-4830-a013-97c6914cc14e)
+| /Game/ExampleContent/Niagara/Gbuffer/SpawnOnGBuffer  |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/c415e78c-4589-4830-a013-97c6914cc14e)  |
+
+パーティクルのスポーン位置からGbufferのUVに変換してGBufferにアクセスするサンプル。  
+CustomHLSLでサンプル位置とGbufferのDepthを比較していて、差が大きい場合はParitcleを殺している。  
+パーティクルを強制的に殺すにはエンジンが提供しているAlive変数をFalseにすると良いっぽい。(スクラッチパッドからアクセスできた)  
 
 ## Skeletal Mesh Reproduction
 サンプル
