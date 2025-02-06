@@ -32,9 +32,18 @@ CustomHLSLでサンプル位置とGbufferのDepthを比較していて、差が�
 パーティクルを強制的に殺すにはエンジンが提供しているAlive変数をFalseにすると良いっぽい。(スクラッチパッドからアクセスできた)  
 
 ## Skeletal Mesh Reproduction
-サンプル
-- /Game/ExampleContent/Niagara/Meshes/SkeletalMeshes/Emitter/SkeletalMeshReproductionSystem_Demo_GPU
-![image](https://github.com/user-attachments/assets/e88b79b2-c605-462f-b39e-e21b86abddf5)
+| /Game/ExampleContent/Niagara/Meshes/SkeletalMeshes/Emitter/SkeletalMeshReproductionSystem_Demo_GPU  |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/e88b79b2-c605-462f-b39e-e21b86abddf5)  |
+
+スキンメッシュのトライングルデータを読んでパーティクルを配置して、ほかのエミッタのパーティクルの位置と速度に合わせてインタラクトさせるサンプル  
+他エミッタAttributeの読み込みとかが参考になりそう。  
+パーティクルの色付けとかはマテリアル上でやってるっぽい？  
+
+| こうすることでほかのエミッタで共有してAtrributeを参照することができる  |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/a77902f4-de64-4f4c-a16b-152783cb7c52)  |
+
 
 ## Distance Field Traversal
 サンプル
