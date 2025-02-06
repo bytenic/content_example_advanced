@@ -45,11 +45,13 @@ CustomHLSLでサンプル位置とGbufferのDepthを比較していて、差が�
 | ------------- |
 | ![image](https://github.com/user-attachments/assets/a77902f4-de64-4f4c-a16b-152783cb7c52)  |
 
-
 ## Distance Field Traversal
-サンプル
-- /Game/ExampleContent/Niagara/DistanceField/InsectLight
-![image](https://github.com/user-attachments/assets/71f4f3a0-1ac0-48ec-93f6-2182a22cd524)
+| /Game/ExampleContent/Niagara/DistanceField/InsectLight  |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/71f4f3a0-1ac0-48ec-93f6-2182a22cd524) |
+
+Niagara Advancedの動画にあった光から虫が逃げていくサンプル。  
+開いたらDevice Removeが起こったので危険  
 
 ## Particle Attribute Reader
 サンプル
