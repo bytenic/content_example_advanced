@@ -237,9 +237,14 @@ for (int i = 0; i < MaxNeighborsPerCell; ++i)
 RotatinonMatrixはSystem上で更新、共有している  
 
 ## Max Neighbors Per Cell, Color Propagation
-| /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors: SHow Grid True  | /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors: SHow Grid False |
+| /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors: Show Grid Particles True  | /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors: Show Grid Particles False |
 | ------------- | ------------- |
 | ![image](https://github.com/user-attachments/assets/d94c8da1-29f2-4d2d-b33a-1c2e3a612a32) | ![image](https://github.com/user-attachments/assets/e9c512f5-bd72-49ea-8bd7-9b0f2c3f682b) |
+
+隣接グリッドに色を伝播させるサンプル。  
+グリッド上にSphereを投影する形でパーティクルをspawn, ランダムに順序だてて色を付けたものを周囲にも色を伝播させる？  
+色自体の伝播はPropagate Neighbor Valuesスクラッチパッドから行っていて、  
+自分自身をAttributeReaderに登録、CustomHLSLで使用しているのでAttributeReaderをCustomHLSLで使うときにサンプルとしても良いかも。  
 
 
 ## Follow The Leader 2.0
