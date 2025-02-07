@@ -229,7 +229,6 @@ for (int i = 0; i < MaxNeighborsPerCell; ++i)
 ```
 
 ## Dynamic Grid Transform
-サンプル
 | /Game/ExampleContent/Niagara/NeighborGrid3D/DynamicTransforms/DynamicGridTransforms  |
 | ------------- |
 | ![image](https://github.com/user-attachments/assets/78d065bb-ddc0-4ba4-a8db-05fd66f53ab9)  |
@@ -238,11 +237,9 @@ for (int i = 0; i < MaxNeighborsPerCell; ++i)
 RotatinonMatrixはSystem上で更新、共有している  
 
 ## Max Neighbors Per Cell
-サンプル
-- /Game/ExampleContent/Niagara/NeighborGrid3D/ColorQuery
-- /Game/ExampleContent/Niagara/NeighborGrid3D/FollowTheLeaders
-- /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors
-![image](https://github.com/user-attachments/assets/d94c8da1-29f2-4d2d-b33a-1c2e3a612a32)
+| /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors  |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/d94c8da1-29f2-4d2d-b33a-1c2e3a612a32)  |
 
 ## Color Propagation
 サンプル
