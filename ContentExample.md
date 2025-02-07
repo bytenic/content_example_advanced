@@ -236,15 +236,11 @@ for (int i = 0; i < MaxNeighborsPerCell; ++i)
 シミュレーションGridの回転サンプル。  
 RotatinonMatrixはSystem上で更新、共有している  
 
-## Max Neighbors Per Cell
-| /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors  |
-| ------------- |
-| ![image](https://github.com/user-attachments/assets/d94c8da1-29f2-4d2d-b33a-1c2e3a612a32)  |
+## Max Neighbors Per Cell, Color Propagation
+| /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors: SHow Grid True  | /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors: SHow Grid False |
+| ------------- | ------------- |
+| ![image](https://github.com/user-attachments/assets/d94c8da1-29f2-4d2d-b33a-1c2e3a612a32) | ![image](https://github.com/user-attachments/assets/e9c512f5-bd72-49ea-8bd7-9b0f2c3f682b) |
 
-## Color Propagation
-サンプル
-- /Game/ExampleContent/Niagara/NeighborGrid3D/PropagateNeighbors
-![image](https://github.com/user-attachments/assets/e9c512f5-bd72-49ea-8bd7-9b0f2c3f682b)
 
 ## Follow The Leader 2.0
 サンプル
