@@ -318,11 +318,16 @@ SDFとの一番近い距離をライン描画しているサンプルなので�
 その分通常のマテリアルインスタンスよりオーバーヘッドがかかる。  
 
 ## Collisions in Simulation Stages
-サンプル
 - /Game/ExampleContent/Niagara/Collision/ParticleUpdateCollisions
 - /Game/ExampleContent/Niagara/Collision/SimpleCollision_System
 - /Game/ExampleContent/Niagara/Collision/SimStageCollisions
-![image](https://github.com/user-attachments/assets/303e9be4-3131-4e8c-9e3d-9953a1a47e2b)
+
+| |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/303e9be4-3131-4e8c-9e3d-9953a1a47e2b)      |
+
+標準モジュールのCollisionサンプル。  
+実際に使うときはSimStageCollisionsのコメントとENiagara_GPUCollisionTypeの内容などは一通り確認したほうがよさそう
 
 ## Dynamic Distance Fields
 |/Game/ExampleContent/Niagara/DistanceField/DynamicDistanceFields/DynamicDistanceField|
