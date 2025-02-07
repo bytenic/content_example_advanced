@@ -325,6 +325,10 @@ SDFとの一番近い距離をライン描画しているサンプルなので�
 ![image](https://github.com/user-attachments/assets/303e9be4-3131-4e8c-9e3d-9953a1a47e2b)
 
 ## Dynamic Distance Fields
-サンプル
-- /Game/ExampleContent/Niagara/DistanceField/DynamicDistanceFields/DynamicDistanceField
-![image](https://github.com/user-attachments/assets/f4724721-3a4f-4b75-bd74-e0f7eb0fbaf7)
+|/Game/ExampleContent/Niagara/DistanceField/DynamicDistanceFields/DynamicDistanceField|
+| ------------- |
+|![image](https://github.com/user-attachments/assets/f4724721-3a4f-4b75-bd74-e0f7eb0fbaf7)|
+
+三角形(User Parameterで座標つくってる)に対して一番近い点を求めるサンプル。  
+球とTriangleの衝突判定とかに使えそう。    
+また、このサンプル自体とは関係ないが[name space modifier](https://qiita.com/yorung/items/bc3c58d9cc563430b280#namespace-modifier%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6) の理解にちょうど良いサンプル  
