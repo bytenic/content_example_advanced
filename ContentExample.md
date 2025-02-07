@@ -108,9 +108,125 @@ Resolverの処理をシミュレーションステージでループさせてや
 Resolverの処理はけっこう込み入ったスクリプトになるので実際に使うとなったときに読むでよさそう。  
 
 ## Color Copy by Cell
-サンプル
-- /Game/ExampleContent/Niagara/NeighborGrid3D/ColorQuery  
-![image](https://github.com/user-attachments/assets/48e4d25e-669a-4d19-bc5f-a04ab3dca288)
+| /Game/ExampleContent/Niagara/NeighborGrid3D/ColorQuery  |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/48e4d25e-669a-4d19-bc5f-a04ab3dca288)  |
+
+グリッドにデータを書き込んだり読み込んだりするサンプル。  
+まず複数のエミッタからグリッドの情報を読むのでSystemでグリッドを作成する。  
+![image](https://github.com/user-attachments/assets/47c1d0d5-af1e-4013-8b44-7d39fb1feb4d)  
+
+
+グリッドの書き込みはこのエミッタのスクラッチパッドから  
+![image](https://github.com/user-attachments/assets/ab7f8443-ca92-42d5-b6df-69f0179dfc94)  
+以下のHLSLで自身のパーティクルが所属しているグリッドのインデックスを書き込む。    
+パーティクルのスポーン数が5で領域は8あるので、1つもパーティクルが所属していないセルも出る
+```
+AddedToGrid = false;
+
+#if GPU_SIMULATION
+
+// Derive the Neighbor Grid Index from the world position
+float3 UnitPos;
+NeighborGrid.SimulationToUnit(Position, SimulationToUnit, UnitPos);
+
+int3 Index;
+NeighborGrid.UnitToIndex(UnitPos, Index.x,Index.y,Index.z);
+
+// Verify that the derived index is valid.
+int3 NumCells;
+NeighborGrid.GetNumCells(NumCells.x, NumCells.y, NumCells.z);
+
+if (Index.x >= 0 && Index.x < NumCells.x && 
+    Index.y >= 0 && Index.y < NumCells.y && 
+	Index.z >= 0 && Index.z < NumCells.z)
+{
+    int LinearIndex;
+    NeighborGrid.IndexToLinear(Index.x, Index.y, Index.z, LinearIndex);
+
+    // Increment the neighbor count for this cell. This records the number of overlaps
+    // and can return a higher count than the MaxNeighborsPerCell
+    int PreviousNeighborCount;
+    NeighborGrid.SetParticleNeighborCount(LinearIndex, 1, PreviousNeighborCount);
+
+    int MaxNeighborsPerCell;
+    NeighborGrid.MaxNeighborsPerCell(MaxNeighborsPerCell);
+
+    // Limit the number of neighbors added to each cell
+    
+    if (PreviousNeighborCount < MaxNeighborsPerCell)
+    {
+        AddedToGrid = true;
+
+        int NeighborGridLinear;
+        NeighborGrid.NeighborGridIndexToLinear(Index.x, Index.y, Index.z, PreviousNeighborCount, NeighborGridLinear);
+
+        int IGNORE;
+        NeighborGrid.SetParticleNeighbor(NeighborGridLinear, ExecIndex, IGNORE);
+    }		
+}
+#endif
+```
+
+グリッドの読み取りはここ。  
+ 
+![image](https://github.com/user-attachments/assets/19bfe5d1-d00e-4a64-997c-35d9d3bd0752)  
+グリッドの読み取りは以下のHLSLから読み取る。  
+自分が所属しているセルにWriteEmitterで書き込みがあったパーティクルがあった場合、  
+そのパーティクルの属性を読み取って色付けしている。  
+パーティクルの色自体はWriteエミッタのInitialize Particleでランダムな値を入れていてそれを使っている。  
+```
+NeighborIndex = -1;
+
+#if GPU_SIMULATION
+
+bool Valid;
+
+// Derive the Neighbor Grid Index from the world position
+float3 UnitPos;
+NeighborGrid.SimulationToUnit(Position, SimulationToUnit, UnitPos);
+
+int3 Index;
+NeighborGrid.UnitToIndex(UnitPos, Index.x,Index.y,Index.z);
+
+// Initialize the closest distance to a really large number
+float neighbordist =  3.4e+38;
+
+// loop over all neighbors in this cell
+int MaxNeighborsPerCell;
+NeighborGrid.MaxNeighborsPerCell(MaxNeighborsPerCell);
+
+for (int i = 0; i < MaxNeighborsPerCell; ++i)
+{
+    // Find the ExecIndex for the current neighbor particle
+    int NeighborLinearIndex;
+    NeighborGrid.NeighborGridIndexToLinear(Index.x, Index.y, Index.z, i, NeighborLinearIndex);
+
+    int CurrNeighborIdx;
+    NeighborGrid.GetParticleNeighbor(NeighborLinearIndex, CurrNeighborIdx);
+
+    // Only proceed if the returned index is valid. This is most often triggered
+    // by there being fewer neighbors in the cell than the MaxNeighborsPerCell limit.
+    if (CurrNeighborIdx != -1)
+    {
+        // Use the Attribute Reader to query the position of the neighbor particle
+        float3 NeighborPos;
+        AttributeReader.GetVectorByIndex<Attribute="Position">(CurrNeighborIdx, Valid, NeighborPos);
+
+        // Compare the distance found maintaining the closest
+        const float3 delta = Position - NeighborPos;
+        const float dist = length(delta);
+
+        if( dist < neighbordist )
+        {
+            neighbordist = dist;
+            NeighborIndex = CurrNeighborIdx;
+        }
+    }  
+}    
+
+#endif
+```
 
 ## Dynamic Grid Transform
 サンプル
