@@ -56,27 +56,29 @@ Niagara Advancedの動画にあった光から虫が逃げていくサンプル�
 ## Particle Attribute Reader
 |/Game/ExampleContent/Niagara/AttributeReader/AttributeReaderSimple  /Game/ExampleContent/Niagara/AttributeReader/AttributeReaderRing|
 | ------------- |
-| ![image](https://github.com/user-attachments/assets/a3642b9d-186b-42b1-a278-1b57113ba533) |
+|![image](https://github.com/user-attachments/assets/a3642b9d-186b-42b1-a278-1b57113ba533)|
 
 他のエミッタからパーティクルのAtrributeを読み取るサンプル  
 以下の箇所でエミッタを指定。  
 ReaderはEmitterのAttributeとしてParameterを作成できる。  
 |Spawn時に他のエミッタを指定|
 | ------------- |
-| ![image](https://github.com/user-attachments/assets/56a83fcb-6748-43c2-aea6-11843d882de6) |
+| ![image](https://github.com/user-attachments/assets/56a83fcb-6748-43c2-aea6-11843d882de6)|
 
 読み取りはスクラッチパッドやモジュールからできる  
 |Particle Update|
 | ------------- |
-|![image](https://github.com/user-attachments/assets/7bf238bf-a930-4720-813a-263d9ee8bf49) |
-
-
-
+|![image](https://github.com/user-attachments/assets/7bf238bf-a930-4720-813a-263d9ee8bf49)|
 
 ## Follow The Leader 1.0
-サンプル
-- /Game/ExampleContent/Niagara/AttributeReader/AttributeReaderFollow
-![image](https://github.com/user-attachments/assets/f7bd556e-ad1a-4709-bac8-d1fd95ee556e)
+|/Game/ExampleContent/Niagara/AttributeReader/AttributeReaderFollow|
+| ------------- |
+|![image](https://github.com/user-attachments/assets/f7bd556e-ad1a-4709-bac8-d1fd95ee556e)|
+
+赤いパーティクルに別エミッタの緑パーティクルを追従させるサンプル。  
+赤のエミッタを緑のパーティクルのエミッタからAttributeReaderで読み取って  
+Spawn時に追従する赤側のParticleIDとオフセットを設定して  
+更新時に追従するようなスクリプトで動かしている。  
 
 ## Spawn Particles From Another Emitter
 サンプル
