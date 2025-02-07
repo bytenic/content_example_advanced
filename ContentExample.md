@@ -81,9 +81,21 @@ Spawn時に追従する赤側のParticleIDとオフセットを設定して
 更新時に追従するようなスクリプトで動かしている。  
 
 ## Spawn Particles From Another Emitter
-サンプル
-- /Game/ExampleContent/Niagara/AttributeReader/AttributeReaderStreamers
-![image](https://github.com/user-attachments/assets/c78f187c-5858-4508-8821-310d12c239e1)
+|/Game/ExampleContent/Niagara/AttributeReader/AttributeReaderStreamers|
+| ------------- |
+|![image](https://github.com/user-attachments/assets/c78f187c-5858-4508-8821-310d12c239e1)|
+
+他のエミッタのパーティクルからスポーンさせるサンプル。  
+まず Spawn Particles from Other Emitterからスポーンさせるパーティクル数をパラメータに応じて決定  
+|(コメント翻訳)Spawn Particles From Other EmitterとSample Particles From Other Emitterはペアで動作します。  spawnモジュールは他のエミッターに新しいパーティクルを問い合わせ、  このエミッターにマッチする適切な数を生成します。|
+| ------------- |
+|![image](https://github.com/user-attachments/assets/7cf71631-37b7-4c39-9238-c54393442a10)|
+
+次にSample Particle from Other Emitterからどのアトリビュートを適用するか決定。  
+オリジナルの動きをつけたいときはVelocityをDisbleにして後続モジュールで動きをつけたら良さそう  
+|(コメント翻訳)次にサンプルモジュールは、どのアトリビュートに注目し、どのようにアトリビュートを適用するかを決定します。  Output Onlyを選択すると、サンプリングされた値が出力値に書き込まれますが、  そのサンプリングされた値は新しくスポーンさたパーティクルには適用されません。|
+| ------------- |
+|![image](https://github.com/user-attachments/assets/10f8c750-98e3-459a-9207-f96fdbcf439d)|
 
 ## Iterative Constraints
 | /Game/ExampleContent/Niagara/AttributeReader/Constraints/Chain_SimulationStages  |
