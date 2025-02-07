@@ -249,8 +249,13 @@ RotatinonMatrixはSystem上で更新、共有している
 
 ## Follow The Leader 2.0
 サンプル
-- /Game/ExampleContent/Niagara/NeighborGrid3D/FollowTheLeaders
-![image](https://github.com/user-attachments/assets/1087e040-2254-4e5d-991b-2b929f8b0b65)
+| /Game/ExampleContent/Niagara/NeighborGrid3D/FollowTheLeaders  |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/1087e040-2254-4e5d-991b-2b929f8b0b65)  |
+
+システムで定義したGridにリングエミッタとVortexForceを使って渦を作り  
+その周囲にさらに細かなパーティクルを大量にSpawnさせて渦をつくるサンプル。  
+Gridを使ってリーダーとなるリングエミッタのパーティクルからVelocityをサンプリングするときに使えそうなサンプル。  
 
 ## Position Based Dynamics
 サンプル
