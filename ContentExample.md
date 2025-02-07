@@ -248,7 +248,6 @@ RotatinonMatrixはSystem上で更新、共有している
 
 
 ## Follow The Leader 2.0
-サンプル
 | /Game/ExampleContent/Niagara/NeighborGrid3D/FollowTheLeaders  |
 | ------------- |
 | ![image](https://github.com/user-attachments/assets/1087e040-2254-4e5d-991b-2b929f8b0b65)  |
@@ -258,22 +257,29 @@ RotatinonMatrixはSystem上で更新、共有している
 Gridを使ってリーダーとなるリングエミッタのパーティクルからVelocityをサンプリングするときに使えそうなサンプル。  
 
 ## Position Based Dynamics
-サンプル
-- /Game/ExampleContent/Niagara/PBD/PBD  
-![image](https://github.com/user-attachments/assets/ce232ed4-d26f-417b-8abd-af6340f05ad2)  
+| /Game/ExampleContent/Niagara/PBD/PBD    |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/ce232ed4-d26f-417b-8abd-af6340f05ad2)   |
+
 PBDのサンプル  
 AdvencedEffectの動画でも紹介されてる。  
 詳細は動画の方を見たほうが良い  
 
 ## Plexus
-サンプル
-- /Game/ExampleContent/Niagara/NeighborGrid3D/Plexus/Plexus
-![image](https://github.com/user-attachments/assets/2c6f6f90-2703-4714-9123-6513dab6cffa)
+| /Game/ExampleContent/Niagara/NeighborGrid3D/Plexus/Plexus    |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/2c6f6f90-2703-4714-9123-6513dab6cffa)   |
+
+PBDで拡縮する球の衝突シミュレーションを行いながら隣接する二つの球をGridから特定して  
+ラインを描画するサンプル。  
+隣接する球を見つけるのにSpatial Sortを使っているので、  
+そういうことがしたくなったときにこのサンプルを見ればいいかも。  
 
 ## Structural Support
-サンプル  
-- /Game/ExampleContent/Niagara/NeighborGrid3D/StructuralSupport/StructuralSupport
-![image](https://github.com/user-attachments/assets/7df3625c-438c-431f-9f72-2185c5aa1912)  
+| /Game/ExampleContent/Niagara/NeighborGrid3D/StructuralSupport/StructuralSupport    |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/7df3625c-438c-431f-9f72-2185c5aa1912)   |
+
 PBDのサンプル  
 AdvencedEffectの動画でも紹介されてる。  
 パーティクルに親子関係やConstraintをつけたり、Surface内部のSDFをサンプルしてパーティクルを操作することで  
@@ -281,9 +287,10 @@ AdvencedEffectの動画でも紹介されてる。
 詳細は動画の方を見たほうが良い  
 
 ## Boids
-サンプル
-- /Game/ExampleContent/Niagara/NeighborGrid3D/Boids
-![image](https://github.com/user-attachments/assets/05704f91-3748-4655-946f-35eed67f7e19)   
+| /Game/ExampleContent/Niagara/NeighborGrid3D/Boids    |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/05704f91-3748-4655-946f-35eed67f7e19)      |
+
 群衆のサンプル  
 AdvencedEffectの動画でも紹介されてる。  
 SDFとの一番近い距離をライン描画しているサンプルなので、SDF使っていろいろするときにみると良いかも
@@ -299,7 +306,10 @@ SDFとの一番近い距離をライン描画しているサンプルなので�
 ![image](https://github.com/user-attachments/assets/30e77ccb-1e2d-4687-a674-6fdc8f0ac28c)
 
 ## Bind Niagara Curves to Sprite Materials
-![image](https://github.com/user-attachments/assets/d9165e5d-2606-4756-bafd-70ae4c099170)  
+| |
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/d9165e5d-2606-4756-bafd-70ae4c099170)      |
+
 カラーカーブをNiagaraに埋め込む機能。  
 他のアセット間での取り回しができないのと、カーブ自体はNigaraSystem内部に組み込まれるはず  
 （有り無しでNiagaraSystemのアセットサイズがかわった）  
