@@ -301,9 +301,17 @@ SDFとの一番近い距離をライン描画しているサンプルなので�
 
 ## Export Particle Data to Blueprint
 サンプル
-- /Game/ExampleContent/Niagara/ExportParticleData/ExportParticleData_System
-- /Game/ExampleContent/Niagara/ExportParticleData/ExportParticleDataExample
-![image](https://github.com/user-attachments/assets/30e77ccb-1e2d-4687-a674-6fdc8f0ac28c)
+
+|Niagara:/Game/ExampleContent/Niagara/ExportParticleData/ExportParticleData_System, BP: /Game/ExampleContent/Niagara/ExportParticleData/ExportParticleDataExample|
+| ------------- |
+| ![image](https://github.com/user-attachments/assets/30e77ccb-1e2d-4687-a674-6fdc8f0ac28c)      |
+
+GPUパーティクルからfloat3のデータ2つとfloat1つをCallbackさせるサンプル。  
+UserParameter経由でActorをしていて毎フレーム衝突したパーティクルをGPUからReadBackしたものをEventとしてBPが読み取る。  
+遅延は1,2F程度。  
+BPでイベントを受け取る場合はUNiagaraParticleCallbackHandler、c++の場合はINiagaraParticleCallbackHandlerを継承すれば良いっぽい。  
+自前でExportイベントを作りたいときは以下のモジュールを参考にすればOK。  
+- /Niagara/Modules/ExportParticleData/ExportParticleDataToBlueprint
 
 ## Bind Niagara Curves to Sprite Materials
 | |
